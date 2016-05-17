@@ -21,7 +21,7 @@ def test_previewCards():
     assert cards[0].ord == 0
     # make sure we haven't accidentally added cards to the db
     assert deck.cardCount() == 1
-
+    
 def test_delete():
     deck = getEmptyCol()
     f = deck.newNote()

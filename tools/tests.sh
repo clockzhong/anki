@@ -20,7 +20,9 @@ if [ x$coverage != x ]; then
     args="--with-coverage"
 else
     args=""
+    args=--exe
     echo "Call with coverage=1 to run coverage tests"
 fi
+#echo "cd $dir && nosetests -vs $lim $args --cover-package=anki"
 (cd $dir && nosetests -vs $lim $args --cover-package=anki)
 
